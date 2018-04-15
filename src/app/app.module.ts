@@ -4,15 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressRouterModule } from '@ngx-progressbar/router';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgProgressModule.forRoot(),
+    NgProgressRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

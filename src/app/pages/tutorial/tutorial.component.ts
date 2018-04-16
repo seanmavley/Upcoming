@@ -19,4 +19,7 @@ export class TutorialComponent implements OnInit {
     });
   }
 
+  skip() {
+    localStorage.setItem('is_toured', 'true');
+  }
 }

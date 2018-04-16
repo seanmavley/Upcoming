@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  busy: boolean;
+
+  constructor(private title: Title) { }
 
   ngOnInit() {
+    this.title.setTitle('Login');
+  }
+
+  onSubmit(formData) {
+    console.log(formData);
+    this.busy = true;
+
+    setTimeout(() => {
+      this.busy = false;
+    }, 2000);
   }
 
 }

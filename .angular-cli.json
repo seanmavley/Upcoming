@@ -21,6 +21,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/materialize-css/dist/css/materialize.min.css",
+        "./assets/css/animate.min.css",
         "styles.css"
       ],
       "scripts": [

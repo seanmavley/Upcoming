@@ -6,7 +6,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
   { path: '', component: MenuComponent, children: [
-    { path: '', loadChildren: './transaction/transaction.module#TransactionModule' }
+    { path: '', loadChildren: './transaction/transaction.module#TransactionModule' },
+    { path: 'a', loadChildren: './account/account.module#AccountModule' },
   ]},
   { path: 'auth', loadChildren: './auth/auth.module#AuthModule' },
   { path: 'p', loadChildren: './pages/pages.module#PagesModule' },

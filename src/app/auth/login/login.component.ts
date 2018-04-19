@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
 
   busy: boolean;
 
-  constructor(private title: Title) { }
+  constructor(private title: Title, private auth: AuthService) { }
 
   ngOnInit() {
     this.title.setTitle('Login');
@@ -19,10 +20,10 @@ export class LoginComponent implements OnInit {
   onSubmit(formData) {
     console.log(formData);
     this.busy = true;
-
-    setTimeout(() => {
-      this.busy = false;
-    }, 2000);
+    this.auth.login()
+      .subscribe((res) => {
+        console.log(res);
+      })
   }
 
 }

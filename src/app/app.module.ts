@@ -10,6 +10,9 @@ import { MenuComponent } from './menu/menu.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './services/auth-guard.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,11 +25,12 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     NgProgressModule.forRoot(),
+    HttpClientModule,
     NgProgressRouterModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
 
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

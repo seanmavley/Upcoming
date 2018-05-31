@@ -8,6 +8,8 @@ In achieving what you see above, Material Design (Angular), Material Icons, A bi
 
 This example is using Angular 6.
 
+[![Demo CountPages alpha](https://blog.khophi.co/wp-content/uploads/2018/05/Peek-2018-05-31-16-35.gif)](https://blog.khophi.co/angular-material-2-responsive-sidebar-menu-navigation/)
+
 ## Run Locally
 
 You know the drill, don't you? Well,
@@ -21,8 +23,8 @@ You know the drill, don't you? Well,
 
 ## Tell me more
 
-To read more about the responsiveness part, check out this article on [KhoPhi's Dev](https://blog.khophi.co)
+To read more about the responsiveness part, check out this article on [KhoPhi's Dev](https://blog.khophi.co/angular-material-2-responsive-sidebar-menu-navigation/)
 
 ## License
 
-MIT?
+MIT

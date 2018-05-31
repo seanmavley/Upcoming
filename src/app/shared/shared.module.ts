@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule, MatCheckboxModule,
-  MatIconModule, MatMenuModule, MatSidenavModule, 
+  MatIconModule, MatMenuModule, MatSidenavModule,
   MatExpansionModule, MatListModule } from '@angular/material';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';

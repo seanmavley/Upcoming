@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   expandHeight = '42px';
   collapseHeight = '42px';
   displayMode = 'flat';
-  overlap = false;  
+  // overlap = false;
 
   watcher: Subscription;
 

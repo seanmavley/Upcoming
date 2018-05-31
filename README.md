@@ -1,27 +1,28 @@
 # Upcoming
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Called upcoming for the lack of better name.
 
-## Development server
+In this project, you'll see how to, using Angular Material 2, to create a responsive navigation with dropdown sidebar navigation.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In achieving what you see above, Material Design (Angular), Material Icons, A bit of Bootstrap classes, and a few lines of custom CSS gets it done.
 
-## Code scaffolding
+This example is using Angular 6.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Run Locally
 
-## Build
+You know the drill, don't you? Well,
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+ - Clone this repository
+ - Change directory into project root
+ - Run `npm install`
+ - If all went well, then run `ng serve`
+ - If all goes well again, open `localhost:4200` to see running.
+ - Try resizing the screen to seen the responsiveness.
 
-## Running unit tests
+## Tell me more
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To read more about the responsiveness part, check out this article on [KhoPhi's Dev](https://blog.khophi.co)
 
-## Running end-to-end tests
+## License
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT?

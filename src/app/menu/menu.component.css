@@ -11,7 +11,7 @@
 }
 
 mat-sidenav {
-  width: 250px;
+  width: 250px;;
 }
 
 .circle {
@@ -28,4 +28,25 @@ mat-sidenav {
   left: 0;
   z-index: -1;
   max-height: 130px;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0px !important;
+  padding-left: 10px !important;
+}
+
+.header-box-shadow {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.bottom-to-top {
+  border: 0px;
+  border-right: 1px;
+  border-style: solid;
+  border-image:
+  linear-gradient(to top, #c1c1c1, rgba(0, 0, 0, 0)) 1 100%
 }

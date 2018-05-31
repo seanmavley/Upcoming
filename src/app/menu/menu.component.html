@@ -1,65 +1,129 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav #sidenav [(mode)]="over" [(opened)]="opened">
-    <div class="my-3" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+  <mat-sidenav #sidenav [(mode)]="over" [(opened)]="opened" class="bottom-to-top">
+    <div class="my-2" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
       <div class="with-bg"></div>
       <div>
         <a>
-          <img class="circle" src="https://i.khophi.co/100">
+          <img class="circle" src="./assets/images/profile.jpg" width="100">
         </a>
       </div>
     </div>
-    <div class="mt-3" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="7px">
+    <div style="background-color: #3e50b5 !important;" class="mt-2 py-3 text-white" fxLayout="column" fxLayoutAlign="center center"
+      fxLayoutGap="7px">
       <div>
         <a>
-          <span class="mat-display-1">John Doe</span>
+          <span class="lead">Rexford</span>
         </a>
       </div>
       <div>
         <a>
-          <span class="">jdandturk@gmail.com</span>
+          <span class="">rexford@gmail.com</span>
         </a>
       </div>
     </div>
-    <div class="mt-3" fxLayout="row wrap">
-      <mat-nav-list>
-        <mat-list-item>
-          <mat-icon>send</mat-icon>
-          <a href="#" class="ml-3">Homepage</a>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon>send</mat-icon>
-          <a href="#" class="ml-3">Another Link Under this</a>
-        </mat-list-item>
-      </mat-nav-list>
+    <div class="mt-3">
+      <mat-accordion multi="true" [displayMode]="displayMode">
+        <mat-expansion-panel class="no-shadow">
+          <mat-expansion-panel-header fxLayout="row" [expandedHeight]="expandHeight" [collapsedHeight]="collapseHeight">
+            <mat-panel-title>
+              Buy Airtime
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list class="ml-0" dense>
+            <mat-list-item>
+              <a href="#">AirtelTigo Airtime</a>
+              <!-- <button mat-icon-button class="mr-3">
+              <mat-icon>info</mat-icon>
+            </button> -->
+            </mat-list-item>
+            <mat-list-item>
+              <a href="#">Vodafone Airtime</a>
+            </mat-list-item>
+            <mat-list-item>
+              <a href="#">MTN Airtime</a>
+            </mat-list-item>
+            <mat-list-item>
+              <a href="#">GLO Airtime</a>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="no-shadow my-0">
+          <mat-expansion-panel-header fxLayout="row" [expandedHeight]="expandHeight" [collapsedHeight]="collapseHeight">
+            <mat-panel-title>
+              Buy Airtime
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list class="ml-0" dense>
+            <mat-list-item>
+              <a href="#">AirtelTigo Airtime</a>
+              <!-- <button mat-icon-button class="mr-3">
+                <mat-icon>info</mat-icon>
+              </button> -->
+            </mat-list-item>
+            <mat-list-item>
+              <a href="#">Vodafone Airtime</a>
+            </mat-list-item>
+            <mat-list-item>
+              <a href="#">MTN Airtime</a>
+            </mat-list-item>
+            <mat-list-item>
+              <a href="#">GLO Airtime</a>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-accordion>
     </div>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" class="header-box-shadow">
       <button mat-icon-button (click)="sidenav.toggle()" fxShow.sm="true" fxShow.gt-sm="false">
         <mat-icon>menu</mat-icon>
       </button>
-      <button mat-button>Upcoming</button>
-      <button mat-button>Link</button>
-      <span class="spacer"></span>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
+      <button mat-button>
+        <mat-icon class="mr-1">home</mat-icon>
+        Upcoming
       </button>
-      <mat-menu #menu="matMenu">
+      <button mat-button>
+        <mat-icon class="mr-1">link</mat-icon>
+        Link</button>
+      <button mat-button>
+        <mat-icon class="mr-1">link</mat-icon>
+        Link</button>
+      <button mat-button [matMenuTriggerFor]="dropDown">
+        DropDown
+        <mat-icon class="ml-1">arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #dropDown="matMenu" overlapTrigger="false">
         <button mat-menu-item>
           <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
+          <span>Dropdown Link 1</span>
         </button>
         <button mat-menu-item disabled>
           <mat-icon>voicemail</mat-icon>
-          <span>Check voicemail</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
+          <span>Dropdown Link 2</span>
         </button>
       </mat-menu>
-      <mat-icon class="example-icon">verified_user</mat-icon>
+      <span class="spacer"></span>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon class="mr-2">account_circle</mat-icon>
+        Account 
+      </button>
+      <mat-menu #menu="matMenu" overlapTrigger="false">
+        <button mat-menu-item>
+          <mat-icon>account_circle</mat-icon>
+          <span>My Account</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>money</mat-icon>
+          <span>Billing</span>
+        </button>
+      </mat-menu>
+      <mat-icon class="ml-3" title="Logout">exit_to_app</mat-icon>
     </mat-toolbar>
   </mat-sidenav-content>
   <router-outlet></router-outlet>

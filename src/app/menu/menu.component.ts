@@ -10,6 +10,10 @@ import { Subscription } from 'rxjs';
 export class MenuComponent implements OnInit {
   opened = true;
   over = 'side';
+  expandHeight = '42px';
+  collapseHeight = '42px';
+  displayMode = 'flat';
+  overlap = false;  
 
   watcher: Subscription;
 

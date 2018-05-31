@@ -1,225 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav mode="over" [(opened)]="opened">
+    Sidenav content
+  </mat-sidenav>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>Upcoming</title>
-</head>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-button>Upcoming</button>
+      <button mat-button>Link</button>
+      <span class="spacer"></span>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voicemail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+      <mat-icon class="example-icon">verified_user</mat-icon>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
-<body>
-  <nav class="blue darken-4" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Upcoming</a>
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <a href="#">Support</a>
-        </li>
-      </ul>
-      <ul class="right show-on-med-and-down">
-        <li>
-          <a class='dropdown-trigger' href='#' data-target='more'>
-            <i class="material-icons">more_vert</i>
-          </a>
-        </li>
-        <ul id='more' class='dropdown-content'>
-          <li>
-            <a href="#!">
-              <i class="material-icons">account_circle</i>Account</a>
-          </li>
-          <li class="divider" tabindex="-1"></li>
-          <li>
-            <a href="#!">
-              <i class="material-icons">help_outline</i>Support</a>
-          </li>
-          <li>
-            <a href="#!">
-              <i class="material-icons">info_outline</i>About
-            </a>
-          </li>
-          <li class="divider" tabindex="-1"></li>
-          <li>
-            <a href="#!">
-              <i class="material-icons">exit_to_app</i>Log Out
-            </a>
-          </li>
-        </ul>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li>
-          <div class="user-view">
-            <div class="background">
-              <img src="https://i.khophi.co/300x150&text=Upcoming">
-            </div>
-            <a href="#user">
-              <img class="circle" src="https://i.khophi.co/50/ffffff">
-            </a>
-            <a href="#name">
-              <span class="white-text name">John Doe</span>
-            </a>
-            <a href="#email">
-              <span class="white-text email">jdandturk@gmail.com</span>
-            </a>
-          </div>
-        </li>
-        <!-- <li _ngcontent-c2="" class="flow-text">
-          <a _ngcontent-c2="" class="flow-text pl-3" href="#!" style="
-    font-size: 1.3rem;
-">
-            <i _ngcontent-c2="" class="material-icons mr-3">home</i>Home</a>
-        </li> -->
-        <li>
-          <a href="#!" class="pl-3" style="font-size: 1.3rem;">
-            <i class="material-icons mr-3">home</i>Home</a>
-        </li>
-        <li>
-          <div class="divider"></div>
-        </li>
-        <li>
-          <a class="flow-text pl-3 grey-text darken-3" style="font-size: 1.3rem;">Services</a>
-        </li>
-        <ul class="collapsible">
-          <li>
-            <div class="collapsible-header black-text flow-text">
-              <i class="material-icons">filter_drama</i>Buy Airtime</div>
-            <div class="collapsible-body">
-              <li>
-                <a href="#">Airtel Airtime</a>
-              </li>
-              <li>
-                <a href="#">Glo Airtime</a>
-              </li>
-              <li>
-                <a href="#">MTN Airtime</a>
-              </li>
-              <li>
-                <a href="#">Tigo Airtime</a>
-              </li>
-              <li>
-                <a href="#">Vodafone Airtime</a>
-              </li>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header black-text flow-text">
-              <i class="material-icons">filter_drama</i>Mobile Money</div>
-            <div class="collapsible-body">
-              <li>
-                <a href="#">Airtel Money</a>
-              </li>
-              <li>
-                <a href="#">MTN Mobile Money</a>
-              </li>
-              <li>
-                <a href="#">Tigo Cash</a>
-              </li>
-              <li>
-                <a href="#">Vodafone Cash</a>
-              </li>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header black-text flow-text">
-              <i class="material-icons">filter_drama</i>Data Bundles</div>
-            <div class="collapsible-body">
-              <li>
-                <a href="#">Busy 4G</a>
-              </li>
-              <li>
-                <a href="#">MTN Data</a>
-              </li>
-              <li>
-                <a href="#">Surfline</a>
-              </li>
-              <li>
-                <a href="#">Vodafone Broadband</a>
-              </li>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header black-text flow-text">
-              <i class="material-icons">filter_drama</i>Pay Bills</div>
-            <div class="collapsible-body">
-              <li>
-                <a href="#">DSTv Bill Payment</a>
-              </li>
-              <li>
-                <a href="#">DSTv Box Office</a>
-              </li>
-              <li>
-                <a href="#">ECG Bill Payment</a>
-              </li>
-              <li>
-                <a href="#">GOtv Bill Payment</a>
-              </li>
-            </div>
-          </li>
-        </ul>
-        <li>
-          <a href="#!" class="pl-3" style="font-size: 1.3rem;">
-            <i class="material-icons mr-3">account_balance</i>Bank Transfer</a>
-        </li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-        <i class="material-icons large">menu</i>
-      </a>
-    </div>
-  </nav>
-  <router-outlet></router-outlet>
-  <footer class="page-footer orange hide-on-med-and-down">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support
-            and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li>
-              <a class="white-text" href="#!">Link 1</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 2</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 3</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li>
-              <a class="white-text" href="#!">Link 1</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 2</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 3</a>
-            </li>
-            <li>
-              <a class="white-text" href="#!">Link 4</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        Made by
-        <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
-</body>
-
-</html>
+<router-outlet></router-outlet>

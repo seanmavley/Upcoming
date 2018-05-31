@@ -1,11 +1,42 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav #sidenav mode="over" [(opened)]="opened">
-    Sidenav content
+  <mat-sidenav #sidenav [(mode)]="over" [(opened)]="opened">
+    <div class="my-3" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <div class="with-bg"></div>
+      <div>
+        <a>
+          <img class="circle" src="https://i.khophi.co/100">
+        </a>
+      </div>
+    </div>
+    <div class="mt-3" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="7px">
+      <div>
+        <a>
+          <span class="mat-display-1">John Doe</span>
+        </a>
+      </div>
+      <div>
+        <a>
+          <span class="">jdandturk@gmail.com</span>
+        </a>
+      </div>
+    </div>
+    <div class="mt-3" fxLayout="row wrap">
+      <mat-nav-list>
+        <mat-list-item>
+          <mat-icon>send</mat-icon>
+          <a href="#" class="ml-3">Homepage</a>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>send</mat-icon>
+          <a href="#" class="ml-3">Another Link Under this</a>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button mat-icon-button (click)="sidenav.toggle()">
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow.sm="true" fxShow.gt-sm="false">
         <mat-icon>menu</mat-icon>
       </button>
       <button mat-button>Upcoming</button>
@@ -31,6 +62,5 @@
       <mat-icon class="example-icon">verified_user</mat-icon>
     </mat-toolbar>
   </mat-sidenav-content>
+  <router-outlet></router-outlet>
 </mat-sidenav-container>
-
-<router-outlet></router-outlet>

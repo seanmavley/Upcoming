@@ -89,30 +89,35 @@
         <mat-icon class="mr-1">home</mat-icon>
         Upcoming
       </button>
-      <button mat-button>
-        <mat-icon class="mr-1">link</mat-icon>
-        Link</button>
-      <button mat-button>
-        <mat-icon class="mr-1">link</mat-icon>
-        Link</button>
-      <button mat-button [matMenuTriggerFor]="dropDown">
-        DropDown
-        <mat-icon class="ml-1">arrow_drop_down</mat-icon>
-      </button>
-      <mat-menu #dropDown="matMenu" overlapTrigger="false">
-        <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Dropdown Link 1</span>
+      <span fxShow.lt-md="false" fxShow.gt-sm="true">
+        <button mat-button>
+          <mat-icon class="mr-1">link</mat-icon>
+          Link</button>
+        <button mat-button>
+          <mat-icon class="mr-1">link</mat-icon>
+          Link</button>
+        <button mat-button [matMenuTriggerFor]="dropDown">
+          DropDown
+          <mat-icon class="ml-1">arrow_drop_down</mat-icon>
         </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Dropdown Link 2</span>
-        </button>
-      </mat-menu>
+        <mat-menu #dropDown="matMenu" overlapTrigger="false">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Dropdown Link 1</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Dropdown Link 2</span>
+          </button>
+        </mat-menu>
+      </span>
       <span class="spacer"></span>
-      <button mat-button [matMenuTriggerFor]="menu">
-        <mat-icon class="mr-2">account_circle</mat-icon>
-        Account
+      <button mat-button [matMenuTriggerFor]="menu" fxShow.lt-md="false" fxShow.gt-sm="true">
+        <mat-icon>account_circle</mat-icon>
+        <span class="ml-2">Account</span>
+      </button>
+      <button mat-icon-button [matMenuTriggerFor]="menu" fxShow.lt-md="true" fxShow.gt-sm="false">
+        <mat-icon>account_circle</mat-icon>
       </button>
       <mat-menu #menu="matMenu" overlapTrigger="false">
         <button mat-menu-item>

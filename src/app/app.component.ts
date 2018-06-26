@@ -11,9 +11,9 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    const is_toured = localStorage.getItem('is_toured');
-    if (!is_toured) {
-      this.router.navigate(['/p/welcome']);
-    }
+    // const is_toured = localStorage.getItem('is_toured');
+    // if (!is_toured) {
+    //   this.router.navigate(['/p/welcome']);
+    // }
   }
 }

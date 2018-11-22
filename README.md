@@ -6,7 +6,7 @@ In this project, you'll see how to, using Angular Material 2, to create a respon
 
 In achieving what you see above, Material Design (Angular), Material Icons, A bit of Bootstrap classes, and a few lines of custom CSS gets it done.
 
-This example is using Angular 6.
+This example is using Angular 7.
 
 [![Demo CountPages alpha](https://blog.khophi.co/wp-content/uploads/2018/05/Peek-2018-05-31-16-35.gif)](https://blog.khophi.co/angular-material-2-responsive-sidebar-menu-navigation/)
 

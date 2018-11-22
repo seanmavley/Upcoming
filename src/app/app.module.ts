@@ -10,8 +10,6 @@ import { MenuComponent } from './menu/menu.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { AuthService } from './services/auth.service';
-import { AuthGuard } from './services/auth-guard.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -36,7 +34,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
 
   ],
-  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
